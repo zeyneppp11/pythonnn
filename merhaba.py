@@ -7,4 +7,5 @@
 ## print(mesaj.lower()+" "+mesaj2.lower()) 
 ## print(mesaj.capitalize()+" "+ mesaj2.capitalize()) ##
 print ("Merhaba ")
-print("DNA") ##DENEMEEEEE
+print("DNA") 
+print("denemeee")
