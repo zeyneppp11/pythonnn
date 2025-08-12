@@ -41,3 +41,28 @@
 #liseler.insert  (2,"Spor")      KAÇINCI İNDEXE EKLEMEK İSTEDİĞİMİZİ YAZARIZ
 #print(liseler)
 
+#liseler=["Fen","Anadolu","Meslek"]
+#liseler.remove("Meslek")           SİLMEK İSTEDİĞMİZİ YAZDIK
+#print(liseler)
+
+#renkler=["Kırmızı","Pembe","Mor","Turuncu","Turkuaz","Lacivert","Mavi","Lila"]
+#renkler.pop()               SONDAKİ ÖĞEYİ SİLDİK
+#print(renkler)
+
+#renkler=["Siyah","Beyaz","Sarı","Mavi","Yeşil"]
+#renkler.reverse()            TERSİNE GÖRE SIRALADIK
+#print(renkler)
+
+#renkler=["Siyah","Beyaz","Sarı","Mavi","Yeşil"]
+#renkler.sort()               ALFABETİK SIRAYA GÖRE SIRALADIK
+#print(renkler)
+
+#renkler=["Siyah","Beyaz","Sarı","Mavi","Yeşil"]
+#renkler.sort(reverse=True)       ALFABENİN TERSİNE GÖRE SIRALADIK
+#print(renkler)
+
+demet=("Sarı","Mavi","Siyah","Kırmızı")
+#for renk in demet:                      ALT ALTA SIRALADIK
+#print(renk)
+
+demet[2]="Siyah"
