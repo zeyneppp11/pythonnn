@@ -65,4 +65,4 @@ demet=("Sarı","Mavi","Siyah","Kırmızı")
 #for renk in demet:                      ALT ALTA SIRALADIK
 #print(renk)
 
-demet[2]="Siyah"
+demet[2]="Siyah" ##############
