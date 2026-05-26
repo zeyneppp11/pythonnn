@@ -1,0 +1,57 @@
+
+@startuml
+skinparam backgroundColor #1e2230
+skinparam Handwritten false
+skinparam roundcorner 10
+skinparam sequenceArrowThickness 2
+skinparam DefaultFontName sans-serif
+skinparam DefaultFontColor white
+
+title TRtek Akıllı Servis Masası - Veritabanı ER Diyagramı
+
+entity "Users (Kullanıcılar)" as Users #3b82f6 {
+  * Id : Guid [PK]
+  --
+  Name : String
+  Email : String
+}
+
+entity "Tickets (Destek Talepleri)" as Tickets #2d3248 {
+  * Id : Guid [PK]
+  --
+  * UserId : Guid [FK]
+  UserPrompt : Text
+  FinalResponse : Text
+  Status : Varchar
+  CreatedAt : DateTime
+}
+
+entity "ImageLogs (Görsel ve OCR Analizleri)" as ImageLogs #2d3248 {
+  * Id : Guid [PK]
+  --
+  * TicketId : Guid [FK] (Unique)
+  OriginalImagePath : Varchar
+  ProcessedImagePath : Varchar
+  RawOcrText : Text
+  DetectedErrorCode : Varchar
+  ConfidenceScore : Integer
+}
+
+entity "KnowledgeBases (Uzman Bilgi Bankası)" as KnowledgeBases #10b981 {
+  * Id : Guid [PK]
+  --
+  ErrorCode : Varchar (Unique)
+  Category : Varchar
+  SolutionText : Text
+}
+
+' Tablo İlişkileri (Kardinalite)
+Users ||--o{ Tickets : "1 -> N (Açar)"
+Tickets ||--|| ImageLogs : "1 -> 1 (İçerir)"
+
+note right of KnowledgeBases
+  Mantıksal Eşleşme:
+  ImageLogs.DetectedErrorCode = KnowledgeBases.ErrorCode
+end note
+
+@enduml

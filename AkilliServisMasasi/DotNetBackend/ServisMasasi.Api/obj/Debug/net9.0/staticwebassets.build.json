@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "65iF8OOIXPHMANEXKNogzHocbsr+00MkjAToq6JTBrg=",
+  "Source": "ServisMasasi.Api",
+  "BasePath": "_content/ServisMasasi.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
